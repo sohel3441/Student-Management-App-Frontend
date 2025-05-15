@@ -1,12 +1,44 @@
-# React + Vite
+# Student Management Frontend (React.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** for the Student Management Application, built with **React.js**. It allows users to create, update, view, and delete student records through a clean and responsive user interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Tech Stack
 
-## Expanding the ESLint configuration
+- React.js
+- Axios (for API calls)
+- React Hooks (useState, useEffect)
+- React Router (if routing is used)
+- CSS / Tailwind / Bootstrap (depending on your styling choice)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- Add a new student
+- Edit student details
+- Delete student records
+- View all students in a table/list
+- Clean UI with responsive design
+
+---
+
+## 🧾 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sohel3441/Student-Management-App-Frontend.git
+cd Student-Management-App-Frontend
+
+
+2. Install dependencies
+
+npm install
+
+3. Start the development server
+npm run dev
+
+App will run at:
+http://localhost:5173
