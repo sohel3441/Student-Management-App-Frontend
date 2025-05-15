@@ -42,3 +42,17 @@ npm run dev
 
 App will run at:
 http://localhost:5173
+
+
+
+
+## 📷 Screenshots
+
+### 🏠 Home Page
+![Home Page](./screenshots/Home-Page-View.png)
+
+### 🧾 Add Student Form
+![Add Student](./screenshots/add-student-page.png)
+
+### 📋 Student List
+![Student List](./screenshots/students-list-page.png)
