@@ -14,7 +14,7 @@ const StudentList = () => {
     email: '',
   });
 
-  // Load all students when the component mounts
+  // Fetch students when component mounts
   useEffect(() => {
     loadStudents();
   }, []);
@@ -36,7 +36,7 @@ const StudentList = () => {
     try {
       await axios.delete(`${API_BASE_URL}/students/${studentId}`);
       alert('Student deleted successfully.');
-      loadStudents();
+      loadStudents(); // Refresh list after deletion
     } catch (error) {
       console.error('Delete failed:', error);
       alert('Something went wrong while deleting the student.');
@@ -44,7 +44,7 @@ const StudentList = () => {
   };
 
   const handleEdit = (student) => {
-    setEditingStudentId(student._id);
+    setEditingStudentId(student._id); // Track the student being edited
     setFormData({
       name: student.name,
       age: student.age,
@@ -54,7 +54,7 @@ const StudentList = () => {
   };
 
   const handleCancel = () => {
-    setEditingStudentId(null);
+    setEditingStudentId(null); // Cancel editing mode
     setFormData({ name: '', age: '', course: '', email: '' });
   };
 
@@ -68,7 +68,7 @@ const StudentList = () => {
       await axios.put(`${API_BASE_URL}/students/${studentId}`, formData);
       alert('Student updated successfully.');
       setEditingStudentId(null);
-      loadStudents();
+      loadStudents(); // Refresh list after update
     } catch (error) {
       console.error('Update failed:', error);
       alert('Something went wrong while updating the student.');
@@ -100,6 +100,7 @@ const StudentList = () => {
               return (
                 <tr key={student._id}>
                   {isEditing ? (
+                    // Editable fields
                     <>
                       <td>
                         <input
@@ -141,6 +142,7 @@ const StudentList = () => {
                       </td>
                     </>
                   ) : (
+                    // Static view mode
                     <>
                       <td>{student.name}</td>
                       <td>{student.age}</td>
